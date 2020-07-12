@@ -1,0 +1,88 @@
+
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>SIPP - Login</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/styles-login.css">
+    <link rel="icon" href="imagens/finch_vert_logo.png" /> 
+    <script src="login.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+</head>
+
+<br>
+
+<body>
+    <script src="js/scripts.js"></script>
+
+    <header>
+    <p>
+        <img src ="imagens/finch_horiz_logo.png" alt ="Logo da Finch"/>
+    </p>
+    <br>
+        <h3> SIPP - Sistema Integrado de Precificação e Proposta</h3> 
+        <h4>Departamento Comercial </h4>         
+</header>
+
+<br>
+
+
+<main>
+<form class=""  name="TelaLogin" method="post" action="login.aspx"></form>
+
+
+<div class="login">
+    <form action="logar" method="POST" id="log">  
+        <p>
+            <label id ="uname">ID de usuário</label>
+            <input type="email" class="form-control" id="username" placeholder="email@exemplo.com.br" onblur="" required/>
+        </p>     
+        <br>
+
+           
+    </form>
+       
+        <a href="#" onclick="login()">
+            <input href="menu.html" type="submit" value="Entrar" class="btn btn-primary" name="btn-logar" id="btn-login" onclick="">
+        </a>
+</div>
+
+<br>
+
+<!-- <div>
+    <script>
+        try {
+            var xmlHttp = new XMLHttpRequest();
+            xmlHttp.open("GET", 'https://manager.people.com.ai/webchat-script/api/peoplechat/8f146d6c-85da-4b12-a68b-651ee155c366', false);
+            xmlHttp.send(null);
+            var response = JSON.parse(xmlHttp.responseText);
+            var scriptElement = document.createElement('script');
+
+            eval(response.content.replace(/textToReplace.people/g, "chat.people"));
+          } catch (error) {
+            console.error(error)
+          }
+    </script>
+</div> -->
+
+
+</script>
+
+</main>   
+
+<br>
+<br>
+<footer>
+        <p>Desenvolvido por: Fabio Aureliano jun 2020 v3.1</p>
+</footer>
+    
+</body>
+</html>
+

@@ -1,0 +1,470 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Orbitron&display=swap');
+/* Alteração do Box Model para border-box */
+*, *::before, *::after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body{font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+    
+    
+    /* background-image: url(/imagens/fundo-tela.png);
+    background-size: cover; */
+}
+
+
+
+/*p{font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;}*/
+
+h1{text-align: center;}
+
+h2{text-align: center;}
+
+h3{text-align: center;}
+
+h4{text-align: center;}
+
+h5{text-align: center;}
+
+h6{text-align: center;}
+
+div.linha_franquia{
+    display:flex;
+    table-layout: fixed;   /* For cells of equal size */
+    margin: auto;    
+}
+
+div.linha_franquia span {
+    display: flex;
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin: auto;
+}
+
+input{
+      border-block-color: blue;
+      border-radius: 5px;
+      height: 30px;
+      width: 200px;
+    
+}
+
+.comerciais{
+    width: 200px;
+    text-align: center;
+    height: 30px;
+    border-radius: 5px;
+    border-block-color: blue;
+}
+
+p{text-align: center;
+    margin: auto;
+}
+
+div.identificacao {
+    display:flex;
+    text-align: center;
+    margin: auto;
+}
+
+div.identificacao2 {
+    display:flex;
+    text-align: center;
+    margin: auto;
+}
+
+.equipe_seguro span{
+    display:flex;
+    margin: auto;
+    justify-content: center;
+}
+
+.cabecalho{
+    background-color:rgba(211, 211, 211, 0.52);
+  
+}
+
+div.identificacao span {
+    display:flex;
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin: auto;
+}
+
+div.inputs {
+    display:flex;
+    width: 100%;
+    table-layout: fixed;   /* For cells of equal size */
+    margin: auto;
+
+}
+
+div.custom-control{
+    display:table-cell;
+    width: 100%;
+    table-layout: auto;   /* For cells of equal size */
+    margin: auto;
+    padding-left: 50px;
+}
+
+div.boxes span{
+    display: flex;
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin: auto;
+}
+
+div.custos span {
+    display: flex;
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin: auto;
+}
+
+div.servicos {
+    display: flex;
+    width: 100%;
+    table-layout: fixed;   /* For cells of equal size */
+    margin: auto;
+    align-content: space-between;
+
+}
+
+div.servs{
+    display: table-cell;
+    text-align: center;
+    table-layout: fixed;   /* For cells of equal size */
+    margin: auto;
+    align-content: space-between;
+
+}
+
+
+div.servicos span {
+    display: table-cell;
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin: auto;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+nav a {
+    flex-direction: column;
+    flex-wrap: wrap;
+    font-size: 0.9rem;
+    font-weight: bold;
+    height: 50px;
+    width: 100%;
+    padding: 140px;
+ 
+}
+
+/* nav a:hover, nav a:focus{
+    background-color: black;
+    color: white;  */
+
+a{
+    color: black;
+    text-decoration: none;
+        }
+
+footer p{
+        font-size: 12px;
+        text-align: left;
+}
+
+/* div.graficos{
+    display:flex;
+    width: auto;
+    height: auto;
+
+}
+
+div.chart{
+    display:flex;
+    width: auto;
+    height: auto;
+} */
+
+.btn{
+    width: 200px;
+    height: 40px;
+}
+div.botao_calc, .botao_calc_simulador{
+    text-align: center;
+    
+}
+
+button:hover{
+    background-color: grey;
+    color:white;
+    border: grey;
+}
+
+
+div.p_minimo, div.p_plataforma, div.c_unit, div.serv, div.categorias{
+    text-align: center;
+}
+
+
+div.c_unit2{
+    text-align: center;
+    padding-right: 45px;
+}
+
+
+.preco_plat, .preco_min, .custo_un{
+    color: red;
+    
+}
+
+.impostos{
+    color: black;
+    text-align: center;
+}
+
+.table{
+    display:table;
+    width: 100%;
+    table-layout: fixed;   /* For cells of equal size */
+    margin: auto;
+    text-align: center;
+    justify-content: center;
+    text-align: center;
+    align-content: center;
+    align-items: center;
+}
+
+div.lista_serv{
+    width: 300px;
+    display:table;
+    table-layout: fixed;   /* For cells of equal size */
+    margin: auto;
+    text-align: center;
+       
+}
+
+.form-control{
+    text-align: center;
+}
+
+#menu{
+    display: flex;
+    scroll-behavior: smooth;
+    justify-content: center;
+    padding-top: 10px;
+}
+
+.navbar{
+    width: 100%;
+}
+
+#voltar {
+    position: fixed;
+    right: 20px;
+    bottom: 0;
+}
+
+#voltar a {
+    background-color: black;
+    color: white;
+    padding: 10px;
+    font-size: .7rem;
+}
+
+#voltar a:hover, #voltar a:focus {
+    background-color: grey;
+    color: white;
+}
+
+/* header{
+    background-color: white;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 100;    
+    
+} */
+
+div.calcular{
+    width: 100%;
+    display: flex;
+    align-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+div.fixed{
+    padding-left: 10px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-content: center
+    ;
+}
+
+div.fixed_btn{
+    width: 30%;
+    padding-left: 20px;
+    display: flex;
+
+    
+}
+
+.cabecalho_tab_calc{
+    color: lightgrey;
+}
+
+div.inicio{
+    text-align: center;
+}
+
+#myProgress  {
+    width:100%;
+    background-color: rgba(211, 211, 211, 0.253);
+    text-align: center;
+    /* border-radius: 20px;   */
+    color: white;
+  }
+  
+  #myBar {
+    width: 0%;
+    height: 30px;
+    background-color: rgb(18, 135, 245);
+    /* border-radius: 20px; */
+    border-radius: 100px;
+  }
+
+  #myBar_cap {
+    width: 0%;
+    height: 30px;
+    background-color: rgb(18, 135, 245);
+    /* border-radius: 20px; */
+    border-radius: 100px;
+  }
+
+  #myProgress_cap {
+    width:100%;
+    background-color: rgba(211, 211, 211, 0);
+    text-align: center;
+    /* border-radius: 20px;   */
+    color: white;
+  }
+  
+  #map {
+    display: none;
+}
+
+#map .state {
+    cursor: pointer;
+}
+
+#map .state .shape {
+    cursor: pointer;
+    -width: 0;
+}
+
+#map .state .label_icon_state {
+    fill: #fff;
+    font-family: Arial;
+    font-size: 11px;
+    line-height: 12px;
+    font-weight: normal;
+}
+
+#map .state .label_state {
+    display: none;
+    font-family: Arial;
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: bold;
+}
+
+#map .state:hover .label_state,
+#map .state.hover .label_state {
+    display: block;
+}
+
+#map .model-green .state .shape {
+    fill: #6cb361;
+}
+
+#map .model-green .state .icon_state {
+    fill: #10592f;
+}
+
+#map .model-green .state .label_icon_state {
+    fill: #fff;
+}
+
+#map .model-green .state .label_state {
+    fill: #666;
+}
+
+#map .model-green .state:hover .shape,
+#map .model-green .state.hover .shape {
+    fill: #2d68b2;
+}
+
+#map .model-green .state:hover .icon_state,
+#map .model-green .state.hover .icon_state {
+    fill: #5a95ce;
+}
+
+#map .model-orange .state .shape {
+    fill: #fd7132;
+}
+
+#map .model-orange .state .icon_state {
+    fill: #6cb361;
+}
+
+#map .model-orange .state .label_icon_state {
+    fill: #fff;
+}
+
+#map .model-orange .state .label_state {
+    fill: #666;
+}
+
+#map .model-orange .state:hover .shape,
+#map .model-orange .state.hover .shape {
+    fill: #c93f04;
+}
+
+#map .model-orange .state:hover .icon_state,
+#map .model-orange .state.hover .icon_state {
+    fill: #10592f;
+}
+
+#map .model-darkgreen .state .shape {
+    fill: #366823;
+}
+
+#map .model-darkgreen .state .icon_state {
+    fill: #2779c6;
+}
+
+#map .model-darkgreen .state .label_icon_state {
+    fill: #fff;
+}
+
+#map .model-darkgreen .state .label_state {
+    fill: #666;
+}
+
+#map .model-darkgreen .state:hover .shape,
+#map .model-darkgreen .state.hover .shape {
+    fill: #4a8c31;
+}
+
+#map .model-darkgreen .state:hover .icon_state,
+#map .model-darkgreen .state.hover .icon_state {
+    fill: #5a95ce;
+}
