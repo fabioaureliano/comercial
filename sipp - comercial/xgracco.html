@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>XGracco</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/styles_comercial.css">
+    <link rel="icon" href="imagens/finch_vert_logo.png" /> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.4.1/jspdf.debug.js" integrity="sha384-THVO/sM0mFD9h7dfSndI6TS0PgAGavwKvB5hAxRRvc0o9cPLohB0wb/PTA7LdUHs" crossorigin="anonymous"></script>
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.js"></script> 
+    <script src="xgracco.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+</head>
+
+<body>
+    <header>
+   
+        <div class="inicio">
+            <img src ="http://www.finchsolucoes.com.br/assets/upload/logo_1.png" alt ="Logo da Finch" id="topo">
+            <h1 >SIPP - Sistema Integrado de Precificação e Proposta</h1>
+        </div>
+<main>
+
+<br>
+    <h3 id="identificar">Identificação - 
+        <small class="text-muted">Insira os dados solicitados abaixo</small>
+    </h3>
+<br>
+
+<!-- Parte inicial - Identifcação do cliente - Data e Comercial responsavel -->
+<div class="identificacao" id="cabecalho">  
+    <!-- Data -->
+    <span>Data da Precificação: <input id="data" class="form-control" type="date"  required/></span>      
+<!-- 
+    Nome do cliente -->
+    <span>Nome do Cliente: <input  class="form-control" type="text" maxlength="50" id="nome_cliente"  required/></span>
+    <span>Código CRM: <input  class="form-control" type="text" maxlength="50" id="cod_crm" placeholder="POT000" required/></span>
+
+<!-- Seleciona o comercial responsavel -->
+<span>Comercial Responsável: 
+    <select class="form-control" name = "select"  id="responsavel" required>
+        <option value="">Selecione</option>
+        <option value="Comercial: Emilia Cappi">Emilia Cappi</option>
+        <option value="Comercial: Fabio Aureliano">Fabio Aureliano</option>
+        <option value="Comercial: Livia Alves">Livia Alves</option>
+        <option value="Comercial: Manoel Losila">Manoel Losila</option>
+        <option value="Comercial: Marcelo Medina">Marcelo Medina</option>
+        <option value="Comercial: Felipe Louzada">Felipe Louzada</option>
+        <option value="Comercial: Leandro Cytrangulo">Leandro Cytrangulo</option>
+    </select>
+</span> 
+</div>
+
+<br>
+<hr>
+
+<h3>
+    XGracco - 
+    <small class="text-muted">Informe os dados solicitados e selecione os itens abaixo</small>
+</h3>
+
+<br>
+
+<div id="xgracco" class="identificacao">
+    <span>
+        <label for="">Quantidade de usuários ativos do sistema:&nbsp;&nbsp; </label>
+        <span> 
+        <input size="17" id="qtde_usu" class="form-control" type="text" placeholder="Mínimo 10 usuários" required/>
+        </span> 
+    </span>
+
+    <!-- <span>
+        <label for="">Quantidade de processos na base: &nbsp;&nbsp; </label>
+        <span> 
+        <input size="15" id="data" class="form-control" type="text" required/>
+        </span> 
+    </span> --> 
+</div>
+
+<br>
+
+<div class="servicos">
+    <div class="custom-control custom-checkbox">
+        <input type="checkbox" class="custom-control-input"  value="640" id="customCheck1" onclick="inception()">
+        <label class="custom-control-label" for="customCheck1" >Inception - Concepção de Negócios: 2 dias  de um Analista Jurídico de Negócios</label>
+      </div>
+
+    <div class="custom-control custom-checkbox">
+        <input type="checkbox" class="custom-control-input" disabled checked  value="460" id="customCheck2" onclick="instalacao()">
+        <label class="custom-control-label" for="customCheck2">Instalação Sistema XGracco:  2 dias de um DevOps</label>
+    </div>
+
+    <div class="custom-control custom-checkbox">
+        <input type="checkbox" class="custom-control-input" disabled checked value="800" onclick="parametrizacoes()" id="customCheck3">
+        <label class="custom-control-label"  for="customCheck3">Parametrizações:  5 dias de um Analista de Suporte</label>
+    </div>
+    <div class="custom-control custom-checkbox">
+        <input type="checkbox" class="custom-control-input" disabled checked value="480" id="customCheck4" onclick="treinamento()">
+        <label class="custom-control-label" for="customCheck4">Treinamentos:  3 dias de um Analista de Suporte</label>
+    </div>
+</div>
+
+<br>
+
+<div class="botao_calc">
+    <button class="btn btn-primary" onclick="funcoes() ">Calcular</button>
+</div>
+
+<br>
+
+<div id="myProgress">
+    <div class="progress-bar-striped progress-bar-animated" id="myBar" style="display: none;"></div>
+</div>
+
+<br>
+<br>
+
+
+<div class="tabela_xgracco" id="tabela_xgracco" style="display: none;">
+    <form action="" method="post" id="form_gracco">
+        <table class="table table-hover">
+            <thead class="cabecalho">
+                <th scope="col">Item</th>
+                <th scope="col">Unidade</th>
+                <th scope="col">Quantidade</th>
+                <th scope="col">Preço Unitário</th>
+                <th scope="col">Preço Total</th>
+                <th scope="col">Pagamento</th>
+            </thead>   
+            <tbody>
+
+            <tr>
+                <th scope="row">XGracco - Usuários</th>
+                    <td><label id="un_medida_gracco_usu">Usuários</label></td>
+                    <td><label id="qtde_gracco_usu">-</label></td>
+                    <td><label>R$<label id="preco_unit_gracco_usu" onblur="" >0,00</label></label></td>
+                    <td><label>R$<label id="preco_total_gracco_usu" onblur="">0,00</label></label></td>
+                    <td><label><label id="preco_total_gracco_usu" onblur="">Recorrente mensal</label></label></td>
+            </tr>
+            <tr>
+                <th scope="row">XGracco - Implantação</th>
+                    <td><label id="un_medida_implantacao">Implantação</label></td>
+                    <td><label id="qtde_implantacao">-</label></td>
+                    <td><label>R$<label id="preco_unit_implantacao" onblur="">0,00</label></label></td>
+                    <td><label>R$</label><label id="preco_total_implantacao">0,00</label></td>
+                    <td><label><label id="preco_total_gracco_implantacao" onblur="">Pagamento único</label></label></td>
+            </tr>
+            <tr>
+            </tbody>
+        </table>
+    </form>
+<br>
+<br>
+</div>
+
+<br>
+
+<div id="obs" style="display: none;">
+    <div class="alert alert-info" role="alert" id="inception_def">
+        Inception serve para o time de negócios da FINCH contatar o cliente, para entender sua operação, debater e sugerir melhores formatos de organização e configuração do fluxo no sistema. Se não contratada, pressupõe que o cliente sabe seu fluxo e não precisará do apoio da FINCH. 
+    </div>
+<br>
+    <div class="alert alert-danger" role="alert">
+        Essa precificação é aplicável para clientes com até 40 usuários, sem utilização de Esteiras. 
+    </div>
+</div>
+
+<br>
+
+<div  class="c_unit" id="btn_imprimir_gracco" style="display: none;">
+    <div class="" >
+        <button class="btn btn-primary" id="btn_imprimir"  onclick="pdf_gracco()">Imprimir</button>
+    </div> 
+</div>
+
+<br>
+<p id="voltar"><a href="menu.html">Menu</a></p>
+</main>
+
+</body>
